@@ -2,7 +2,7 @@
 <html lang="ja" class="no-js">
 <head>
 <meta charset="UTF-8">
-<title>無題ドキュメント</title>
+<title>Enabler</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 
@@ -24,6 +24,16 @@
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="">
 
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'evk1men',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
 <link href="common/css/ress.min.css" rel="stylesheet"/>
 <link href="common/css/slick-theme.css" rel="stylesheet"/>
 <link href="common/css/slick.css" rel="stylesheet"/>
@@ -37,75 +47,262 @@
 
 </head>
 <body>
-  <div id="op"><img src="common/images/logo_black.svg" alt=""></div>
+
+  <div id="op"><img src="common/images/logo_mark.svg" alt=""></div>
   <header>
     <button id="menuButton">
-      <span></span><span></span><span></span>
+      <span></span><span></span>
     </button>
     <nav id="globalNav">
       <div class="navWrap">
         <ul class="mainNav">
-          <li><a href="#" class="inner-link">TOP</a></li>
-          <li><a href="#attention" class="inner-link">ATTENTION</a></li>
-          <li><a href="#schedule" class="inner-link">SCHEDULE</a></li>
-          <li><a href="#ticket" class="inner-link">TICKET</a></li>
+          <li><a href="#about" class="inner-link">About</a></li>
+          <li><a href="#property" class="inner-link">Property</a></li>
+          <li><a href="#story" class="inner-link">Project Story</a></li>
+          <li><a href="#message" class="inner-link">Message</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>タイトル</h2>
-      <ul>
-        <li>
-          <a class="modal" href="#modal01">
-            <p>ここを押すとモーダル表示</p>
-          </a>
-        </li>
-        <li>
-          <a class="modal" href="#modal02">
-            <p>ここを押すとモーダル表示</p>
-          </a>
-        </li>
-        <li>
-          <a class="modal" href="#modal03">
-            <p>ここを押すとモーダル表示</p>
-          </a>
-        </li>
-        <li>
-          <a class="modal" href="#modal04">
-            <p>ここを押すとモーダル表示</p>
-          </a>
-        </li>
-        <li>
-          <a class="modal" href="#modal05">
-            <p>ここを押すとモーダル表示</p>
-          </a>
-        </li>
-      </ul>
-      <div style="display: none;">
-        <div id="modal01">
-          <p>モーダルで表示する内容</p>
+
+    <div id="mainVisual">
+      <div class="mvLeft">
+        <div class="brandLogo"><img src="common/images/logo_mark.svg" alt="ブランドロゴ"></div>
+        <p class="catch">「極上な日常」を世界中で。<br>
+        普段の生活や遊びを特別に。
+        <span class="en">“Exquisite everyday life” around the world.<br>
+        Make everyday life and play special.</span></p>
+        <h1><img src="common/images/logo_title.svg" alt="Enabler"></h1>
+      </div>
+      <div class="opImgWrap"><div class="mvRight"><img src="common/images/mv_img.jpg" alt=""></div></div>
+      <a class="scroll" href="#about"><img src="common/images/arrow.png" alt="">Scroll Down</a>
+    </div>
+
+
+    <section id="about">
+      <div class="inner">
+        <h2 class="anim">(About)</h2>
+        <p class="lead anim"><img src="common/images/logo_title.svg" alt="Enabler">とは</p>
+        <div class="aboutText anim">
+          <p>Enablerは、世界中に美しい場所を作り、その場所を共有し合うコミュニティを構築するプロジェクトです。参加者同士が価値観を共有し、特別な体験を享受できる環境を提供しています。シェアリングとサブスクリプションモデルを採用し、メンバーが自由に複数の物件を利用できるようにしています。</p>
         </div>
-        <div id="modal02">
-          <p>モーダルで表示する内容</p>
+        <div class="btnWrap anim"><a href="#" target="_blank">詳しくはこちら</a></div>
+      </div>
+    </section>
+
+
+    <section id="property">
+      <h2 class="anim">(Property)</h2>
+
+      <div class="propertyWrap">
+
+        <div>
+          <div class="propertyContent inner">
+            <p class="bgText anim">WHITE HOUSE<br>Atami</p>
+
+            <div class="propertyContent__disc">
+              <h3 class="anim">ホワイトハウス 熱海</h3>
+              <p class="lead anim">熱海を見渡す絶景オーシャンビューの<br>プライベートヴィラ</p>
+              <div class="propertyContent__disc__img"><img class="anim" src="common/images/property01.jpg" alt=""></div>
+              <div class="text anim">
+                <p>熱海市の絶景オーシャンビュー。<br>
+                デザイナーズ物件の、豪華な一棟貸しプライベートヴィラです。</p>
+                <p>夜は満天の星空の下、大自然を満喫しながら、一番大切な人や仲間と一緒にこちらの施設で、癒しのお時間をお過ごし頂けます。</p>
+                <p>お部屋のインテリアは白ベースに統一し、全面ガラス張りで相模湾が一望できる絶景のオーシャンビューをお楽しみください。</p>
+              </div>
+              <div class="btnWrap airb anim"><a href="#" target="_blank"><img src="common/images/logo_airbnb.png" alt="airbnb"></a></div>
+            </div>
+          </div>
+
+          <div class="slideWrap anim">
+            <div class="propertySlider">
+              <div><img src="common/images/property01_slider01.jpg" alt=""></div>
+              <div><img src="common/images/property01_slider02.jpg" alt=""></div>
+              <div><img src="common/images/property01_slider03.jpg" alt=""></div>
+              <div><img src="common/images/property01_slider04.jpg" alt=""></div>
+              <div><img src="common/images/property01_slider01.jpg" alt=""></div>
+              <div><img src="common/images/property01_slider02.jpg" alt=""></div>
+              <div><img src="common/images/property01_slider03.jpg" alt=""></div>
+              <div><img src="common/images/property01_slider04.jpg" alt=""></div>
+            </div>
+          </div>
         </div>
-        <div id="modal03">
-          <p>モーダルで表示する内容</p>
+
+        <div>
+          <div class="propertyContent inner">
+            <p class="bgText anim">THE LODGE<br>Teshikaga</p>
+
+            <div class="propertyContent__disc">
+              <h3 class="anim">ザ・ロッジ 弟子屈</h3>
+              <div class="propertyContent__disc__img"><img class="anim" src="common/images/property02.jpg" alt=""></div>
+              <div class="text anim">
+                <p>弟子屈の大自然を堪能できる圧巻のロケーション。木々の香りを思い切り楽しむことができる最高の邸宅。天然温泉が日々の疲れを癒します。</p>
+                <p>夏はマイナスイオンたっぷりの美味しい空気の下でのBBQ。<br>冬は薪ストーブでロマンチックなひとときを。</p>
+                <p>心安らぐ宿泊先で、ゆったりと流れる時間をお楽しみください。</p>
+              </div>
+              <div class="btnWrap airb anim"><a href="#" target="_blank"><img src="common/images/logo_airbnb.png" alt="airbnb"></a></div>
+            </div>
+          </div>
+
+          <div class="slideWrap anim">
+            <div class="propertySlider">
+              <div><img src="common/images/property02_slider01.jpg" alt=""></div>
+              <div><img src="common/images/property02_slider02.jpg" alt=""></div>
+              <div><img src="common/images/property02_slider03.jpg" alt=""></div>
+              <div><img src="common/images/property02_slider04.jpg" alt=""></div>
+              <div><img src="common/images/property02_slider01.jpg" alt=""></div>
+              <div><img src="common/images/property02_slider02.jpg" alt=""></div>
+              <div><img src="common/images/property02_slider03.jpg" alt=""></div>
+              <div><img src="common/images/property02_slider04.jpg" alt=""></div>
+            </div>
+          </div>
         </div>
-        <div id="modal04">
-          <p>モーダルで表示する内容</p>
+
+        <div>
+          <div class="propertyContent inner">
+            <p class="bgText anim">THE NEST<br>Teshikaga</p>
+
+            <div class="propertyContent__disc">
+              <h3 class="anim">ザ・ネスト 弟子屈</h3>
+              <p class="lead anim">弟子屈の大自然を堪能できる<br>圧巻のロケーション</p>
+              <div class="propertyContent__disc__img"><img class="anim" src="common/images/property03.jpg" alt=""></div>
+              <div class="text anim">
+                <p>弟子屈の大自然を堪能できる圧巻のロケーションで、木々の香りを思い切り楽しむことができる最高の邸宅。<br>天然温泉が出ますのでゆっくり湯船に浸かって日々の疲れを癒していただけます。</p>
+                <p>建築テック系スタートアップのVUILDと共創型戦略デザインファームのBIOTOPEと協業した、デジタルデザインハウスの新規プロジェクト "Nesting" のプロジェクト第一棟目。断熱性能の基準であるHEAT20のG2を実現。デジタルテクノロジーを用いた、快適な別荘です。</p>
+              </div>
+              <div class="btnWrap airb anim"><a href="#" target="_blank"><img src="common/images/logo_airbnb.png" alt="airbnb"></a></div>
+            </div>
+          </div>
+
+          <div class="slideWrap anim">
+            <div class="propertySlider">
+              <div><img src="common/images/property03_slider01.jpg" alt=""></div>
+              <div><img src="common/images/property03_slider02.jpg" alt=""></div>
+              <div><img src="common/images/property03_slider03.jpg" alt=""></div>
+              <div><img src="common/images/property03_slider04.jpg" alt=""></div>
+              <div><img src="common/images/property03_slider01.jpg" alt=""></div>
+              <div><img src="common/images/property03_slider02.jpg" alt=""></div>
+              <div><img src="common/images/property03_slider03.jpg" alt=""></div>
+              <div><img src="common/images/property03_slider04.jpg" alt=""></div>
+            </div>
+          </div>
         </div>
-        <div id="modal05">
-          <p>モーダルで表示する内容</p>
+
+        <div>
+          <div class="propertyContent inner">
+            <p class="bgText anim">BEACH HOUSE<br>Honolulu</p>
+
+            <div class="propertyContent__disc">
+              <h3 class="anim">ビーチハウス ホノルル</h3>
+              <p class="lead anim">ハワイ海を一望する絶景ビーチハウス</p>
+              <div class="propertyContent__disc__img"><img class="anim" src="common/images/property04.jpg" alt=""></div>
+              <div class="text anim">
+                <p>全室から砂浜まで徒歩0分。<br>遠浅の海で安全な海水浴、毎晩絶景サンセット。</p>
+                <p>波音に包まれたリラックス空間。<br>喧騒から離れた静かな環境でありながら、都市の便利さにもすぐアクセス可能な理想的ロケーションは唯一無二。</p>
+                <p>ハワイの自然に囲まれ、新たな出会いと忘れられない思い出を。<br>ゆったり流れる時間の中、特別な長期滞在をお楽しみください。</p>
+              </div>
+              <div class="btnWrap airb anim"><a href="#" target="_blank"><img src="common/images/logo_airbnb.png" alt="airbnb"></a></div>
+            </div>
+          </div>
+
+          <div class="slideWrap anim">
+            <div class="propertySlider">
+              <div><img src="common/images/property04_slider01.jpg" alt=""></div>
+              <div><img src="common/images/property04_slider02.jpg" alt=""></div>
+              <div><img src="common/images/property04_slider03.jpg" alt=""></div>
+              <div><img src="common/images/property04_slider04.jpg" alt=""></div>
+              <div><img src="common/images/property04_slider01.jpg" alt=""></div>
+              <div><img src="common/images/property04_slider02.jpg" alt=""></div>
+              <div><img src="common/images/property04_slider03.jpg" alt=""></div>
+              <div><img src="common/images/property04_slider04.jpg" alt=""></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="propertyContent inner">
+            <p class="bgText anim">GARAGE HOUSE<br>Honolulu</p>
+
+            <div class="propertyContent__disc">
+              <h3 class="anim">ガレージハウス ホノルル</h3>
+              <p class="lead anim">ハワイの暖かい潮風に当たり<br>日々の疲れを癒す</p>
+              <div class="propertyContent__disc__img"><img class="anim" src="common/images/property05.jpg" alt=""></div>
+              <div class="text anim">
+                <p>ホノルル中心街から車で15分のロケーション。<br>砂浜まで徒歩0分で、毎晩絶景サンセットをお楽しみいただけます。</p>
+                <p>ココヘッドを望む絶景オーシャンビューを眺めながらのBBQは、非日常そのもの。</p>
+              </div>
+              <div class="btnWrap airb anim"><a href="#" target="_blank"><img src="common/images/logo_airbnb.png" alt="airbnb"></a></div>
+            </div>
+          </div>
+
+          <div class="slideWrap anim">
+            <div class="propertySlider">
+              <div><img src="common/images/property05_slider01.jpg" alt=""></div>
+              <div><img src="common/images/property05_slider02.jpg" alt=""></div>
+              <div><img src="common/images/property05_slider03.jpg" alt=""></div>
+              <div><img src="common/images/property05_slider04.jpg" alt=""></div>
+              <div><img src="common/images/property05_slider01.jpg" alt=""></div>
+              <div><img src="common/images/property05_slider02.jpg" alt=""></div>
+              <div><img src="common/images/property05_slider03.jpg" alt=""></div>
+              <div><img src="common/images/property05_slider04.jpg" alt=""></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="story">
+      <div class="inner">
+        <h2 class="anim">(Project Story)</h2>
+        <p class="anim">Project Story</p>
+        <div class="storyText anim">
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+        <div class="btnWrap anim"><a href="#" target="_blank">詳しくはこちら</a></div>
+      </div>
+    </section>
+
+
+    <section id="message">
+      <div class="inner">
+        <h2 class="anim">(Message)</h2>
+        <div class="messageText anim">
+          <p>こんにちは。僕は「本当に気に入った場所で、最高の時間を過ごす」という想いから、心が震える物件は自分で買ってしまうほどの不動産好きです。<br>
+          そんな僕が「ここなら自分も滞在したい」と惚れ込んだ特別な物件だけを厳選してご紹介します。そこに集まるみんなでシェアしながら、唯一無二の体験とコミュニティを一緒につくりあげていきたいんです。</p>
+          <p>五感を揺さぶるようなロケーション、心をほどく空間設計──。<br>
+          “ここでしか味わえない”瞬間を、ぜひあなた自身で体感してみてください。</p>
+          <p class="signature">代表　濱田優貴</p>
+        </div>
+        <div class="company anim">
+          <div class="companyLogo">
+            <div class="logoMark"><img src="common/images/logo_mark_wh.svg" alt="ブランドロゴ"></div>
+            <p class="logoTitle"><img src="common/images/logo_title_wh.svg" alt="Enabler"></p>
+          </div>
+          <div class="companyInfo">
+            <p>株式会社イネブラ</p>
+            <p>〒102-0074  <br class="sp">東京都千代田区九段南1-5-6 <br class="sp">りそな九段ビル5階KSフロア<br>
+            設立：2021年10月21日<br>
+            代表：濱田優貴</p>
+          </div>
         </div>
       </div>
-      <a href="リンク" target="_blank"><i class="snsIcon icon-tt"></i></a>
     </section>
+
   </main>
 
+
   <footer>
+    <ul class="snsList">
+      <li><a href="https://www.instagram.com/enabler.jp/" target="_blank"><i class="snsIcon icon-in"></i></a></li>
+      <li><a href="https://x.com/enablerofficial" target="_blank"><i class="snsIcon icon-x"></i></a></li>
+      <li><a href="https://www.youtube.com/channel/UC09Mz20YCqqCwSYfNLALnFA" target="_blank"><i class="snsIcon icon-yt"></i></a></li>
+      <li><a href="https://www.facebook.com/p/Enabler-100086108706516/" target="_blank"><i class="snsIcon icon-fb"></i></a></li>
+    </ul>
+    <p class="copy">&copy; 2025 Enabler</p>
   </footer>
 </body>
 </html>
