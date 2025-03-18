@@ -515,7 +515,7 @@ header .hdrLogo {
 	margin-bottom: 1em;
 }
 .propertyContent__disc .text {
-	font-size: min(3.4vw, 16px);
+	font-size: min(3.2vw, 15px);
 }
 .propertyContent__disc .text p + p {
 	margin-top: 1.5em;
@@ -536,15 +536,27 @@ header .hdrLogo {
 	object-fit: cover;
 }
 
-.slideWrap {
-	overflow: hidden;
+.propertySlider .slideImg {
+  height: 27.8vw;
+  /* width: 32.8vw; */
+  padding: 0 1.4vw;
+  position: relative;
 }
-.propertySlider {
+.propertySlider .slideImg img {
+  width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* .slideWrap {
+	overflow: hidden;
+} */
+/* .propertySlider {
   display: flex;
   min-width: 100%;
   width: min-content;
-}
-.propertyWrap > div:nth-child(odd) .propertySlider {
+} */
+/* .propertyWrap > div:nth-child(odd) .propertySlider {
   animation: 20s linear infinite sliderAnimLeft;
 }
 .propertyWrap > div:nth-child(even) .propertySlider {
@@ -561,7 +573,7 @@ header .hdrLogo {
   width: 100%;
 	height: 100%;
 	object-fit: cover;
-}
+} */
 @keyframes sliderAnimLeft {
   100% { transform: translateX(-50%);}
 }
@@ -598,6 +610,9 @@ header .hdrLogo {
 	.propertyContent__disc h3 {
 		margin-bottom: 1em;
 	}
+	.propertyContent__disc .lead {
+		margin-bottom: 1.5em;
+	}
 	.propertyContent__disc__img {
 		position: relative;
 		width: 100%;
@@ -613,11 +628,15 @@ header .hdrLogo {
 	.propertyContent__disc .btnWrap {
 		justify-content: center;
 	}
-	.propertySlider > div {
+	.propertySlider .slideImg {
+		height: 41.7vw;
+		padding: 0 2.8vw;
+	}
+	/* .propertySlider > div {
 		height: 41.7vw;
     width: 45vw;
     margin: 0 1.4vw;
-	}
+	} */
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////
@@ -639,6 +658,7 @@ header .hdrLogo {
 	font-weight: 700;
 	text-align: center;
 	line-height: 1;
+	letter-spacing: 0.06em;
 	margin-bottom: min(6vw, 40px);
 }
 .storyText p {
