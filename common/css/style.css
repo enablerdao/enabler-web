@@ -92,10 +92,6 @@ section:nth-of-type(1) {
 	opacity: 1;
 	transform: translateY(0);
 }
-@keyframes op {
-	0% { opacity: 0;}
-	100% { opacity: 1;}
-}
 
 .btnWrap {
 	display: flex;
@@ -134,44 +130,13 @@ section:nth-of-type(1) {
 	}
 }
 
-/* ------- op --------- */
-#op {
-	position: fixed;
-	top: 0;
-	left: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 100%;
-	background-color: #fff;
-	z-index: 9999;
-	/* animation: opBg 1s ease-out 1.8s forwards; */
-}
-#op img {
-	width: 30%;
-	max-width: 200px;
-	opacity: 0;
-	animation: oplogo .6s ease-out .5s forwards;
-}
-/* @keyframes opBg {
-	0% { opacity: 1;}
-	100% { opacity: 0;}
-} */
-@keyframes oplogo {
-	0% { opacity: 0;}
-	100% { opacity: 1;}
-}
 
 /* ////////////////////////////////////////////////////////////////////////////////
 
 	menu button
 
 //////////////////////////////////////////////////////////////////////////////// */
-header {
-	opacity: 0;
-	animation: op 1.5s ease-out 5.3s forwards;
-}
+
 .mainNav {
   display: flex;
 	flex-wrap: wrap;
@@ -289,6 +254,71 @@ header .hdrLogo {
 	Main Visual
 
 //////////////////////////////////////////////////////////////////////////////// */
+
+@keyframes fade {
+	0% { opacity: 0;}
+	100% { opacity: 1;}
+}
+@keyframes slideUp {
+	0% { transform: translateY(min(6vw, 60px));}
+	100% { transform: translateY(0);}
+}
+
+header {
+	opacity: 0;
+	animation: fade 1.5s ease-out 6.6s forwards;
+}
+/* ------- op --------- */
+#op {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	z-index: 9999;
+	animation: opBg 1s ease-out 4.5s forwards;
+}
+#op img.mark {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 30%;
+	max-width: 200px;
+	opacity: 0;
+	animation: oplogo 2s ease-out .5s forwards;
+}
+#op img.title {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 45%;
+	max-width: 300px;
+	opacity: 0;
+	animation: oplogo 2s ease-out 2.5s forwards;
+}
+@keyframes opBg {
+	0% { width: 100%;}
+	100% { width: 0;}
+}
+@keyframes oplogo {
+	0% { opacity: 0;}
+	50% { opacity: 1;}
+	100% { opacity: 0;}
+}
+@media screen and (orientation: portrait) {
+	#op {
+		left: auto;
+		right: 0;
+	}
+}
+
+
 #mainVisual {
 	position: relative;
 	display: flex;
@@ -304,14 +334,14 @@ header .hdrLogo {
 	width: 6.3vw;
 
 	opacity: 0;
-	animation: op 1.5s ease-out 5.3s forwards;
+	animation: fade 1.5s ease-out 6.6s forwards;
 }
 #mainVisual .mvLeft .catch {
 	font-size: 1.5vw;
 	letter-spacing: 0.15em;
 
 	opacity: 0;
-	animation: op 1s ease-out 4s forwards;
+	animation: fade 1s ease-out 5.6s forwards, slideUp 0.6s 5.6s forwards;
 }
 #mainVisual .mvLeft .catch .en {
 	display: block;
@@ -326,22 +356,13 @@ header .hdrLogo {
 #mainVisual .mvLeft h1 {
 	width: 43.6vw;
 	opacity: 0;
-	animation: op 2.5s ease-out 2.5s forwards;
+	animation: fade 2.5s ease-out 5.3s forwards, slideUp 0.6s 5.3s forwards;
 }
-#mainVisual .opImgWrap {
-	width: 0;
-	overflow: hidden;
-	animation: animMvImg 1s ease-out 3.5s forwards;
-}
-@keyframes animMvImg {
-	0% { width: 0;}
-	100% { width: 60vw;}
-}
-#mainVisual .opImgWrap .mvRight {
+#mainVisual .mvRight {
 	height: 100vh;
 	width: 60vw;
 }
-#mainVisual .opImgWrap .mvRight img {
+#mainVisual .mvRight img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -360,7 +381,7 @@ header .hdrLogo {
 	letter-spacing: 0.01em;
 
 	opacity: 0;
-	animation: op 1.5s ease-out 5.3s forwards;
+	animation: fade 1.5s ease-out 6.6s forwards;
 }
 #mainVisual .scroll img {
 	display: block;
@@ -412,17 +433,11 @@ header .hdrLogo {
 		width: min(44.3vh, 86vw);
 		margin-top: 2.7vh;
 	}
-	#mainVisual .opImgWrap {
+	#mainVisual .mvRight {
+		width: 92.8vw;
+		height: 42.5vh;
 		margin-top: 5.5vh;
 		margin-left: 7.2vw;
-	}
-	@keyframes animMvImg {
-		0% { width: 0;}
-		100% { width: 92.8vw;}
-	}
-	#mainVisual .opImgWrap .mvRight {
-    width: 92.8vw;
-		height: 42.5vh;
 	}
 	#mainVisual .scroll {
 		left: 7.2vw;
@@ -536,31 +551,19 @@ header .hdrLogo {
 	object-fit: cover;
 }
 
-.propertySlider .slideImg {
-  height: 27.8vw;
-  /* width: 32.8vw; */
-  padding: 0 1.4vw;
-  position: relative;
-}
-.propertySlider .slideImg img {
-  width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-/* .slideWrap {
+.slideWrap {
 	overflow: hidden;
-} */
-/* .propertySlider {
+}
+.propertySlider {
   display: flex;
   min-width: 100%;
   width: min-content;
-} */
-/* .propertyWrap > div:nth-child(odd) .propertySlider {
-  animation: 20s linear infinite sliderAnimLeft;
+}
+.propertyWrap > div:nth-child(odd) .propertySlider {
+  animation: 30s linear infinite sliderAnimLeft;
 }
 .propertyWrap > div:nth-child(even) .propertySlider {
-  animation: 20s linear infinite sliderAnimRight;
+  animation: 30s linear infinite sliderAnimRight;
 	transform: translateX(-50%);
 }
 .propertySlider > div {
@@ -573,7 +576,7 @@ header .hdrLogo {
   width: 100%;
 	height: 100%;
 	object-fit: cover;
-} */
+}
 @keyframes sliderAnimLeft {
   100% { transform: translateX(-50%);}
 }
@@ -632,11 +635,11 @@ header .hdrLogo {
 		height: 41.7vw;
 		padding: 0 2.8vw;
 	}
-	/* .propertySlider > div {
+	.propertySlider > div {
 		height: 41.7vw;
     width: 45vw;
     margin: 0 1.4vw;
-	} */
+	}
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////
@@ -759,6 +762,7 @@ header .hdrLogo {
 //////////////////////////////////////////////////////////////////////////////// */
 
 footer {
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	padding: min(6vw, 64px);
@@ -775,10 +779,67 @@ footer .copy {
 	letter-spacing: 0.06em;
 }
 
+footer .pageTop {
+	display: none;
+	position: fixed;
+	right: min(6vw, 64px);
+	bottom: min(6vw, 64px);
+}
+footer .pageTop a {
+	display: flex;
+	align-items: center;
+}
+footer .pageTop p {
+	font-family: sofia-pro, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.2vw;
+}
+footer .pageTop.on p {
+	color: #fff;
+	transition: all .6s ease-out;
+}
+footer .pageTop span {
+	position: relative;
+	display: block;
+	width: 2em;
+	height: 2em;
+	margin-left: 0.6em;
+}
+footer .pageTop span img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all .6s ease-out;
+}
+footer .pageTop.on span img:nth-child(1) {
+	display: none;
+}
+footer .pageTop:not(.on) span img:nth-child(2) {
+	display: none;
+}
+
+
+@media screen and (min-width:821px) {
+	footer .copy {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
 @media screen and (max-width:820px) {
 	footer {
 		flex-direction: column;
 		align-items: center;
 		gap: min(8vw, 40px);
 	}
+
+	footer .pageTop p {
+		font-size: 3.2vw;
+	}
+	/* #mainVisual .scroll {
+		left: 7.2vw;
+		bottom: 3%;
+	} */
 }
