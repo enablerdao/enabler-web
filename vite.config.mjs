@@ -13,8 +13,12 @@ export default defineConfig({
       input: {
         main: './index.html'
       },
+      external: ['jquery'],
       output: {
         format: 'iife',
+        globals: {
+          jquery: 'jQuery'
+        },
         assetFileNames: (assetInfo) => {
           const info = assetInfo.name.split('.');
           const ext = info[info.length - 1];
@@ -25,9 +29,7 @@ export default defineConfig({
             return 'common/css/[name][extname]';
           }
           return 'assets/[name]-[hash][extname]';
-        },
-        entryFileNames: 'common/js/[name]-[hash].js',
-        chunkFileNames: 'common/js/[name]-[hash].js'
+        }
       }
     }
   },
@@ -43,12 +45,14 @@ export default defineConfig({
           dest: 'dist/common/css'
         },
         {
-          src: 'common/js/common.js',
-          dest: 'dist/common/js'
+          src: 'common/js/slick.js',
+          dest: 'dist/common/js',
+          rename: 'slick.js'
         },
         {
-          src: 'common/js/slick.js',
-          dest: 'dist/common/js'
+          src: 'common/js/common.js',
+          dest: 'dist/common/js',
+          rename: 'common.js'
         },
         {
           src: 'node_modules/slick-carousel/slick/slick.css',
