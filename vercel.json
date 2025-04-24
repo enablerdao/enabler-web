@@ -9,12 +9,20 @@
   ],
   "routes": [
     {
-      "src": "/common/(.*)",
-      "dest": "/common/$1"
+      "src": "/common/images/(.*)",
+      "dest": "/common/images/$1"
+    },
+    {
+      "src": "/common/css/(.*)",
+      "dest": "/common/css/$1"
+    },
+    {
+      "src": "/common/js/(.*)",
+      "dest": "/common/js/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/$1"
     }
   ]
 } 

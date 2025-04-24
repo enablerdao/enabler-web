@@ -15,8 +15,16 @@ export default defineConfig({
       },
       output: {
         assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          if (/\.(mp4|webm|ogg|mp3|wav|flac|aac|jpg|png|jpeg|gif|svg|webp)$/i.test(assetInfo.name)) {
+            return `common/images/[name][extname]`;
+          }
           if (assetInfo.name.endsWith('.css')) {
             return 'common/css/[name][extname]';
+          }
+          if (assetInfo.name.endsWith('.js')) {
+            return 'common/js/[name][extname]';
           }
           return 'assets/[name]-[hash][extname]';
         }
@@ -27,24 +35,32 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: 'common/**/*',
-          dest: '.'
+          src: 'common/images/*',
+          dest: 'dist/common/images'
+        },
+        {
+          src: 'common/css/*',
+          dest: 'dist/common/css'
+        },
+        {
+          src: 'common/js/*',
+          dest: 'dist/common/js'
         },
         {
           src: 'node_modules/slick-carousel/slick/slick.css',
-          dest: 'common/css'
+          dest: 'dist/common/css'
         },
         {
           src: 'node_modules/slick-carousel/slick/slick-theme.css',
-          dest: 'common/css'
+          dest: 'dist/common/css'
         },
         {
           src: 'node_modules/slick-carousel/slick/fonts/*',
-          dest: 'common/css/fonts'
+          dest: 'dist/common/css/fonts'
         },
         {
           src: 'node_modules/slick-carousel/slick/ajax-loader.gif',
-          dest: 'common/css'
+          dest: 'dist/common/css'
         }
       ]
     })
