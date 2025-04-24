@@ -62,3 +62,58 @@ $(function(){
 	});
 
 });
+
+$(document).ready(function() {
+  // Menu Button Toggle
+  $('#menuButton').on('click', function() {
+    $(this).toggleClass('active');
+    $('nav').toggleClass('open');
+  });
+
+  // Smooth Scroll
+  $('a[href^="#"]').on('click', function(e) {
+    e.preventDefault();
+    var target = $(this.hash);
+    if (target.length) {
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+    }
+  });
+
+  // Property Title Animation
+  $(window).on('scroll', function() {
+    $('.propertyTitle').each(function() {
+      if ($(this).offset().top <= $(window).scrollTop() + $(window).height() * 0.8) {
+        $(this).addClass('on');
+      }
+    });
+  });
+
+  // Initialize Slick Slider
+  $('.propertySlider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    autoplay: true,
+    autoplaySpeed: 3000
+  });
+
+  // Page Top Button
+  var $pageTop = $('.pageTop');
+  $(window).on('scroll', function() {
+    if ($(this).scrollTop() > 300) {
+      $pageTop.fadeIn();
+    } else {
+      $pageTop.fadeOut();
+    }
+  });
+
+  $pageTop.on('click', function() {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 500);
+    return false;
+  });
+});
