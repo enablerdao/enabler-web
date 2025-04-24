@@ -10,7 +10,9 @@
     "deploy": "vercel deploy --prod"
   },
   "dependencies": {
-    "vercel": "^41.6.2"
+    "vercel": "^41.6.2",
+    "jquery": "^3.3.1",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "vite": "^5.0.0",
