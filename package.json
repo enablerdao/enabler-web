@@ -1,21 +1,21 @@
 {
   "name": "html-enabler",
   "version": "1.0.0",
-  "private": true,
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --config vite.config.mjs",
-    "preview": "vite preview",
-    "start": "vercel dev",
-    "deploy": "vercel deploy --prod"
+    "build": "vite build",
+    "preview": "vite preview"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "jquery": "^3.3.1",
-    "vercel": "^41.6.2"
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
-    "slick-carousel": "^1.8.1",
-    "vite": "^5.0.0",
-    "vite-plugin-static-copy": "^2.3.1"
+    "vite": "^5.4.18"
   }
 }
