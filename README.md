@@ -64,8 +64,8 @@
 
 1. **リポジトリをクローン**
     ```bash
-    git clone https://github.com/enablerdao/html-enabler.git
-    cd html-enabler
+    git clone https://github.com/enablerdao/enabler-web.git
+    cd enabler-web
     ```
 2. **依存関係をインストール**
     ```bash
@@ -82,7 +82,7 @@
 ## 📁 ディレクトリ構成 (抜粋)
 
 ```
-html-enabler/
+enabler-web/
 ├── common/
 │   ├── css/            # スタイルシート
 │   ├── images/         # 画像アセット (物件写真・ロゴなど)
