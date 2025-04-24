@@ -43,7 +43,11 @@ export default defineConfig({
           dest: 'dist/common/css'
         },
         {
-          src: 'node_modules/slick-carousel/slick/slick.js',
+          src: 'common/js/common.js',
+          dest: 'dist/common/js'
+        },
+        {
+          src: 'common/js/slick.js',
           dest: 'dist/common/js'
         },
         {
