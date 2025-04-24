@@ -8,14 +8,43 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    assetsDir: 'assets'
+    assetsDir: 'assets',
+    rollupOptions: {
+      input: {
+        main: './index.html'
+      },
+      output: {
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name.endsWith('.css')) {
+            return 'common/css/[name][extname]';
+          }
+          return 'assets/[name]-[hash][extname]';
+        }
+      }
+    }
   },
   plugins: [
     viteStaticCopy({
       targets: [
         {
           src: 'common/**/*',
-          dest: '.'
+          dest: 'dist/common'
+        },
+        {
+          src: 'node_modules/slick-carousel/slick/slick.css',
+          dest: 'dist/common/css'
+        },
+        {
+          src: 'node_modules/slick-carousel/slick/slick-theme.css',
+          dest: 'dist/common/css'
+        },
+        {
+          src: 'node_modules/slick-carousel/slick/fonts/*',
+          dest: 'dist/common/css/fonts'
+        },
+        {
+          src: 'node_modules/slick-carousel/slick/ajax-loader.gif',
+          dest: 'dist/common/css'
         }
       ]
     })
