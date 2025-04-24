@@ -28,23 +28,23 @@ export default defineConfig({
       targets: [
         {
           src: 'common/**/*',
-          dest: 'dist/common'
+          dest: '.'
         },
         {
           src: 'node_modules/slick-carousel/slick/slick.css',
-          dest: 'dist/common/css'
+          dest: 'common/css'
         },
         {
           src: 'node_modules/slick-carousel/slick/slick-theme.css',
-          dest: 'dist/common/css'
+          dest: 'common/css'
         },
         {
           src: 'node_modules/slick-carousel/slick/fonts/*',
-          dest: 'dist/common/css/fonts'
+          dest: 'common/css/fonts'
         },
         {
           src: 'node_modules/slick-carousel/slick/ajax-loader.gif',
-          dest: 'dist/common/css'
+          dest: 'common/css'
         }
       ]
     })
