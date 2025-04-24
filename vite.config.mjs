@@ -22,13 +22,19 @@ export default defineConfig({
         assetFileNames: (assetInfo) => {
           const info = assetInfo.name.split('.');
           const ext = info[info.length - 1];
+          if (assetInfo.name === 'favicon.ico') {
+            return 'favicon.ico';
+          }
+          if (assetInfo.name === 'apple-touch-icon.png') {
+            return 'apple-touch-icon.png';
+          }
           if (/\.(mp4|webm|ogg|mp3|wav|flac|aac|jpg|png|jpeg|gif|svg|webp)$/i.test(assetInfo.name)) {
             return `common/images/[name][extname]`;
           }
           if (assetInfo.name.endsWith('.css')) {
             return 'common/css/[name][extname]';
           }
-          return 'assets/[name]-[hash][extname]';
+          return 'common/js/[name][extname]';
         }
       }
     }
@@ -69,6 +75,14 @@ export default defineConfig({
         {
           src: 'node_modules/slick-carousel/slick/ajax-loader.gif',
           dest: 'dist/common/css'
+        },
+        {
+          src: 'favicon.ico',
+          dest: 'dist'
+        },
+        {
+          src: 'apple-touch-icon.png',
+          dest: 'dist'
         }
       ]
     })
