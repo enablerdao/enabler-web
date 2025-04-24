@@ -15,7 +15,7 @@ export default defineConfig({
       targets: [
         {
           src: 'common/**/*',
-          dest: 'common'
+          dest: '.'
         }
       ]
     })
