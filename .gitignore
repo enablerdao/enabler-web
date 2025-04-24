@@ -1,6 +1,10 @@
 .vscode
 .DS_Store
-common/images/*.jpg
-common/images/*.jpeg
-common/images/*.gif
+#! コメントアウト
+# common/images/*.jpg
+# common/images/*.jpeg
+# common/images/*.gif
+node_modules/
+dist/
+.vite/
 .vercel
