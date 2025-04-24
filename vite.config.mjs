@@ -11,7 +11,7 @@ export default defineConfig({
   },
   plugins: [
     viteStaticCopy({
-      targets: [{ src: 'common', dest: '' }]
+      targets: [{ src: 'common/**/*', dest: '' }]
     })
   ]
 }); 
