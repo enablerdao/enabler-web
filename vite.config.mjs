@@ -14,6 +14,7 @@ export default defineConfig({
         main: './index.html'
       },
       output: {
+        format: 'iife',
         assetFileNames: (assetInfo) => {
           const info = assetInfo.name.split('.');
           const ext = info[info.length - 1];
@@ -23,11 +24,10 @@ export default defineConfig({
           if (assetInfo.name.endsWith('.css')) {
             return 'common/css/[name][extname]';
           }
-          if (assetInfo.name.endsWith('.js')) {
-            return 'common/js/[name][extname]';
-          }
           return 'assets/[name]-[hash][extname]';
-        }
+        },
+        entryFileNames: 'common/js/[name]-[hash].js',
+        chunkFileNames: 'common/js/[name]-[hash].js'
       }
     }
   },
@@ -43,7 +43,7 @@ export default defineConfig({
           dest: 'dist/common/css'
         },
         {
-          src: 'common/js/*',
+          src: 'node_modules/slick-carousel/slick/slick.js',
           dest: 'dist/common/js'
         },
         {

@@ -1,7 +1,5 @@
 # Enabler 公式サイト
 
-![Enabler Logo](./common/images/logo.png)
-
 "Exquisite everyday life" を世界中で提供する Enabler の公式ウェブサイトのリポジトリです。ラグジュアリーなバケーションレンタルを中心に、プロジェクトストーリーやメッセージを紹介しています。
 
 ---
