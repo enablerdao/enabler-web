@@ -1,4 +1,6 @@
 .vscode
 .DS_Store
-common/images/
+common/images/*.jpg
+common/images/*.jpeg
+common/images/*.gif
 .vercel

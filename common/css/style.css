@@ -2,9 +2,9 @@
 @font-face {
 	font-family: 'sns_ico';
 	src:
-		url('./fonts/sns_ico.ttf?sij4de') format('truetype'),
-		url('./fonts/sns_ico.woff?sij4de') format('woff'),
-		url('./fonts/sns_ico.svg?sij4de#sns_ico') format('svg');
+		url('../fonts/sns_ico.ttf?sij4de') format('truetype'),
+		url('../fonts/sns_ico.woff?sij4de') format('woff'),
+		url('../fonts/sns_ico.svg?sij4de#sns_ico') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -42,290 +42,102 @@ i.snsIcon {
 
 //////////////////////////////////////////////////////////////////////////////// */
 html {
+	line-height: 1.8;
+	letter-spacing: 0.08em;
+	scroll-behavior: smooth;
 	font-family: "noto-sans-cjk-jp", sans-serif;
-	font-size: 16px;
-	line-height: 1.6;
+	font-weight: 400;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
 	color: #333;
+	font-size: min(3.4vw, 16px);
 }
-
-body {
-	margin: 0;
-	padding: 0;
+img {
+	width: 100%;
+	vertical-align: middle;
 }
-
-/* Header */
-h1 {
-	position: fixed;
-	top: 20px;
-	left: 20px;
-	z-index: 100;
-	margin: 0;
+li {
+	list-style: none;
 }
-
-h1 img {
-	width: 120px;
-	height: auto;
-}
-
-/* Menu Button */
-#menuButton {
-	position: fixed;
-	top: 20px;
-	right: 20px;
-	z-index: 100;
-	width: 60px;
-	height: 60px;
-	background: #000;
-	border: none;
-	border-radius: 50%;
-	cursor: pointer;
-}
-
-#menuButton span {
-	display: block;
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 30px;
-	height: 2px;
-	background: #fff;
-}
-
-#menuButton span:first-child {
-	top: 40%;
-}
-
-#menuButton span:last-child {
-	bottom: 40%;
-}
-
-/* Navigation */
-nav {
-	position: fixed;
-	top: 0;
-	right: -300px;
-	width: 300px;
-	height: 100vh;
-	background: #fff;
-	padding: 80px 40px;
-	transition: right 0.3s ease;
-	z-index: 99;
-}
-
-nav.open {
-	right: 0;
-}
-
-nav img {
-	width: 200px;
-	margin-bottom: 40px;
-}
-
-nav ul {
-	margin: 0;
-	padding: 0;
-}
-
-nav ul li {
-	margin-bottom: 20px;
-}
-
-nav ul li a {
-	color: #333;
-	text-decoration: none;
-	font-size: 18px;
-	font-weight: bold;
-}
-
-nav ul li ul {
-	margin: 10px 0 0 20px;
-}
-
-nav ul li ul li {
-	margin-bottom: 10px;
-}
-
-nav ul li ul li a {
-	font-size: 16px;
-	font-weight: normal;
-}
-
-/* Hero Section */
-.hero {
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	position: relative;
-	padding: 0 20px;
-	background: #fff;
-}
-
-.hero img {
-	max-width: 100%;
-	height: auto;
-}
-
-.hero img:first-child {
-	width: 120px;
-	margin-bottom: 30px;
-}
-
-.hero img:nth-child(2) {
-	width: 300px;
-	margin-bottom: 40px;
-}
-
-.hero p {
-	font-size: 18px;
-	line-height: 2;
-	margin-bottom: 60px;
-	max-width: 800px;
-}
-
-.hero p br {
-	display: block;
-}
-
-.scroll {
-	position: absolute;
-	bottom: 40px;
-	left: 50%;
-	transform: translateX(-50%);
+a {
+	transition: all 0.5s ease;
 	text-decoration: none;
 	color: #333;
-	font-size: 14px;
+}
+
+h2 {
+	font-size: min(3.4vw, 16px);
+	font-weight: 700;
 	text-align: center;
-	width: 100px;
+	margin-bottom: min(8vw, 40px);
 }
-
-.scroll img {
-	width: 30px;
-	margin-bottom: 10px;
-	animation: scrollDown 2s infinite;
-}
-
-@keyframes scrollDown {
-	0% {
-		transform: translateY(0);
-		opacity: 1;
-	}
-	50% {
-		transform: translateY(10px);
-		opacity: 0.7;
-	}
-	100% {
-		transform: translateY(0);
-		opacity: 1;
-	}
-}
-
-@media screen and (max-width: 768px) {
-	.hero img:first-child {
-		width: 100px;
-	}
-
-	.hero img:nth-child(2) {
-		width: 240px;
-	}
-
-	.hero p {
-		font-size: 16px;
-		line-height: 1.8;
-		margin-bottom: 40px;
-	}
-
-	.scroll {
-		bottom: 30px;
-	}
-}
-
-@media screen and (max-width: 480px) {
-	.hero img:first-child {
-		width: 80px;
-	}
-
-	.hero img:nth-child(2) {
-		width: 200px;
-	}
-
-	.hero p {
-		font-size: 14px;
-		line-height: 1.6;
-	}
-}
-
-/* Sections */
 section {
-	padding: 100px 0;
+	padding: min(16vw, 100px) 0;
+}
+section:nth-of-type(1) {
+	padding-top: min(16vw, 160px);
+}
+.inner {
+	max-width: 1028px;
+	padding: 0 min(5vw, 64px);
+	margin: auto;
 }
 
-section h2 {
-	font-size: 24px;
+.anim {
+	opacity: 0;
+	transform: translateY(60px);
+	transition: all .8s ease-out;
+}
+.anim.on {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.btnWrap {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: min(4vw, 32px);
+}
+.btnWrap a {
+	width: 80%;
+	max-width: 300px;
+	min-width: fit-content;
+	display: block;
+	padding: min(3vw, 16px);
+	font-size: min(3.4vw, 16px);
+	font-weight: 500;
 	text-align: center;
-	margin-bottom: 60px;
+	text-decoration: none;
+	background-color: #000;
+	color: #fff;
+	border-radius: 100px;
+}
+.btnWrap.airb a {
+	background-image: linear-gradient(90deg, #e61d4f 30%, #d70466 70%);
+  background-size: 200% 100%;
+	padding: min(3vw, 14px);
+  animation: airbBG 3s linear 0s infinite alternate;
+}
+@keyframes airbBG {
+  0% { background-position: 0%;}
+  100% { background-position: 100%;}
 }
 
-/* Property Section */
-.propertyWrap {
-	margin-bottom: 100px;
+
+.btnWrap.airb img {
+	width: 92px;
 }
 
-.propertyTitle {
-	position: relative;
-	margin-bottom: 60px;
+@media screen and (min-width:821px) {
+	.sp {display: none;}
 }
-
-.propertyTitle .bgText {
-	font-size: 60px;
-	color: #f0f0f0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: -1;
-}
-
-.propertyTitle h3 {
-	font-size: 32px;
-	margin: 20px 0;
-}
-
-.propertyContent {
-	max-width: 800px;
-	margin: 0 auto;
-	padding: 0 20px;
-}
-
-.propertyContent p {
-	margin-bottom: 30px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-	nav {
-		width: 100%;
-		right: -100%;
-	}
-	
-	.hero img:nth-child(2) {
-		width: 150px;
-	}
-	
-	.hero p {
-		font-size: 16px;
-		padding: 0 20px;
-	}
-	
-	.propertyTitle .bgText {
-		font-size: 40px;
-	}
-	
-	.propertyTitle h3 {
-		font-size: 24px;
+@media (hover: hover) {
+	a:hover {
+		opacity: 0.6;
 	}
 }
+
 
 /* ////////////////////////////////////////////////////////////////////////////////
 
@@ -445,11 +257,11 @@ header .hdrLogo {
   z-index: 1;
   opacity: 0.7;
 }
-.mainNav li .propertyThumbList a:nth-child(1)::before { background: url("./images/property01.jpg") no-repeat center center; background-size: cover;}
-.mainNav li .propertyThumbList a:nth-child(2)::before { background: url("./images/property02.jpg") no-repeat center center; background-size: cover;}
-.mainNav li .propertyThumbList a:nth-child(3)::before { background: url("./images/property03.jpg") no-repeat center center; background-size: cover;}
-.mainNav li .propertyThumbList a:nth-child(4)::before { background: url("./images/property04.jpg") no-repeat center center; background-size: cover;}
-.mainNav li .propertyThumbList a:nth-child(5)::before { background: url("./images/property05.jpg") no-repeat center center; background-size: cover;}
+.mainNav li .propertyThumbList a:nth-child(1)::before { background: url("../images/property01.jpg") no-repeat center center; background-size: cover;}
+.mainNav li .propertyThumbList a:nth-child(2)::before { background: url("../images/property02.jpg") no-repeat center center; background-size: cover;}
+.mainNav li .propertyThumbList a:nth-child(3)::before { background: url("../images/property03.jpg") no-repeat center center; background-size: cover;}
+.mainNav li .propertyThumbList a:nth-child(4)::before { background: url("../images/property04.jpg") no-repeat center center; background-size: cover;}
+.mainNav li .propertyThumbList a:nth-child(5)::before { background: url("../images/property05.jpg") no-repeat center center; background-size: cover;}
 
 .mainNav li .propertyThumbList a span {
   position: relative;
@@ -1190,181 +1002,4 @@ footer .pageTop:not(.on) span img:nth-child(2) {
 		font-size: 3.2vw;
 	}
 
-}
-
-/* ----------------------------------------------------------------
-   Consolidated Media Queries
----------------------------------------------------------------- */
-
-/* Navigation and Hero adjustments for tablets */
-@media screen and (max-width: 768px) {
-    .mainNav {
-        width: 100%;
-        height: auto;
-        position: relative;
-        padding: 20px 0;
-    }
-    .mainNav li {
-        display: block;
-        margin: 10px 0;
-    }
-    .mainNav li a {
-        padding: 10px 20px;
-    }
-    .mainNav li .propertyThumbList {
-        position: relative;
-        left: 0;
-        top: 0;
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    /* Hero */
-    .hero {
-        padding: 0 20px;
-        height: 300px;
-    }
-    .hero img {
-        width: 60px;
-        height: auto;
-    }
-}
-
-/* Small screens */
-@media screen and (max-width: 480px) {
-    .mainNav li a {
-        font-size: 14px;
-    }
-
-    .hero {
-        padding: 0 15px;
-        height: 200px;
-    }
-    .hero img {
-        width: 50px;
-        height: auto;
-    }
-}
-
-/* 820px breakpoint – Overrides for larger tablets */
-@media screen and (max-width: 820px) {
-    /* Header */
-    #menuButton {
-        width: 50px;
-        height: 50px;
-    }
-    #menuButton span:nth-child(1) { transform: translate(-50%, -200%); }
-    #menuButton span:nth-child(2) { transform: translate(-50%, 100%); }
-
-    /* Navigation thumbnails */
-    .mainNav li .propertyThumbList a {
-        width: 100%;
-        height: 200px;
-    }
-
-    /* About */
-    .aboutText p {
-        font-size: 16px;
-        line-height: 1.8;
-    }
-
-    /* Property */
-    .propertyTitle {
-        margin-bottom: 40px;
-    }
-    .propertyTitle .bgText {
-        font-size: 40px;
-    }
-    .propertyTitle h3 {
-        font-size: 24px;
-    }
-    .btnWrap.airb img {
-        width: 120px;
-    }
-    .btnWrap.airb a {
-        font-size: 14px;
-    }
-
-    /* Story */
-    #story h2 + p {
-        font-size: 16px;
-        line-height: 1.8;
-    }
-    .storyText p {
-        font-size: 16px;
-        line-height: 1.8;
-    }
-
-    /* Message */
-    .messageText p {
-        font-size: 16px;
-        line-height: 1.8;
-    }
-
-    /* Company */
-    .company {
-        padding: 40px 20px;
-    }
-    .company .companyLogo {
-        margin-bottom: 30px;
-    }
-    .company .companyLogo .logoMark {
-        width: 80px;
-    }
-    .company .companyLogo .logoTitle {
-        font-size: 24px;
-    }
-    .company .companyInfo {
-        font-size: 14px;
-    }
-
-    /* Footer */
-    footer {
-        padding: 40px 20px;
-    }
-    footer .pageTop p {
-        font-size: 14px;
-    }
-}
-
-/* Orientation tweaks */
-@media screen and (orientation: landscape) {
-    #mainVisual .mvLeft .brandLogo {
-        width: 100px;
-    }
-    #mainVisual .mvLeft .catch {
-        font-size: 24px;
-    }
-    #mainVisual .mvLeft h1 {
-        font-size: 32px;
-    }
-}
-@media screen and (orientation: portrait) {
-    #op {
-        height: 100vh;
-    }
-    #mainVisual {
-        height: 100vh;
-    }
-    #mainVisual .mvLeft {
-        width: 100%;
-    }
-    #mainVisual .mvLeft .brandLogo {
-        width: 80px;
-    }
-    #mainVisual .mvLeft .catch {
-        font-size: 20px;
-    }
-    #mainVisual .mvLeft .catch .en {
-        font-size: 16px;
-    }
-    #mainVisual .mvLeft h1 {
-        font-size: 28px;
-    }
-    #mainVisual .mvRight {
-        display: none;
-    }
-    #mainVisual .scroll {
-        bottom: 20px;
-    }
 }
